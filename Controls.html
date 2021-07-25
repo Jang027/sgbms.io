@@ -1,0 +1,405 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="icon" sizes="196x196" href="SysLogo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+      <!-- Local CSS -->
+      <link href="myStyle.css" rel="stylesheet" type:"text/css">
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+      
+      <title>SGBEMS - Controls</title>
+      
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top topNav shadow " id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" >
+                <img src="SysLogo.png" class="logoImg align-self-center">
+             <pre><h1 class="titleDashFont align-self-center">Controls</h1></pre>
+            </a>
+            <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase toggleDrop text-black-50 rounded" aria-controls="navbarResponsive"
+                aria-expanded="true" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto navtext">
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger align-content-center " href="dashboard.html"><i class="fa fa-dashboard fa-lg m-2 " ></i>Dashboard</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Controls.html"><i class="fa fa-sliders fa-lg m-2"></i>Controls</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="users.html"><i class="fa fa-users fa-lg m-2"></i>Users</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="settings.html"><i class='fa fa-cogs fa-lg m-2'></i>Settings</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><button onclick="signOut()" id="signOut" class="p-3 btn signButton btn-block text-white btn-user shadow " type="submit">Sign-Out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!-- Container Starts -->   
+    <div class="container dashPad">
+      
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>Inverter Breaker</h4>
+            
+            <div class="row border shadow m-1">
+              <div class="col-3">
+                <h6></h6>
+                <label class="switch" for="mBreaker">
+                  <input type="checkbox" id="mBreaker" class="mdl-switch__input">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-8">
+            <!-- INVERTER BREAKER -->
+            <h4>Green Energy Resources Breakers</h4>
+            <div class="row border shadow mb-4 m-1">
+              <div class="col-3">
+                <h6>Solar</h6>
+                <label class="switch" for="sBreaker">
+                  <input type="checkbox" id="sBreaker" class="mdl-switch__input">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="col-3">
+                <h6>Wind</h6>
+                <label class="switch" for="wBreaker">
+                  <input type="checkbox" id="wBreaker">
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="col-3">
+                <h6>Hydro</h6>
+                <label class="switch" for="hBreaker">
+                  <input type="checkbox" id="hBreaker">
+                  <span class="slider"></span>
+                </label>
+              </div>
+          
+              <div class="col-3">
+                <h6>Human Kinetics</h6>
+                <label class="switch" for="pBreaker">
+                  <input type="checkbox" id="pBreaker">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <h4 class=" mt-3">Green Energy Resources Units</h4>
+        <div class="row border shadow m-1">
+          <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="d-flex"><h5 >Solar Power</h5></div>
+          
+            <div class="d-flex justify-content-center align-self-center">
+              
+              <label class="switch d-inline-flex" for="s-1">
+                <input type="checkbox" id="s-1" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label> 
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>S-1:</h6>
+              <h6 id="sv1"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <label class="switch" for="s-2">
+                <input type="checkbox" id="s-2" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>S-2:</h6>
+              <h6 id="sv2"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <label class="switch" for="s-3">
+                <input type="checkbox" id="s-3" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>S-3:</h6>
+              <h6 id="sv3"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <label class="switch" for="s-4">
+                <input type="checkbox" id="s-4" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>S-4:</h6>
+              <h6 id="sv4"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">  
+              <label class="switch" for="s-5">
+                <input type="checkbox" id="s-5" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>S-5:</h6>
+              <h6 id="sv5"></h6>
+              </div>
+            </div>
+    
+            <!-- Solar Units -->
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h5>Wind Power</h5>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="w-1">
+                <input type="checkbox" id="w-1" class="mdl-switch__input">
+                <h3 id="W1"></h3>
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>W-1:</h6>
+              <h6 id="wv1"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="w-2">
+                <input type="checkbox" id="w-2" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>W-2:</h6>
+              <h6 id="wv2"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="w-3">
+                <input type="checkbox" id="w-3" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>W-3:</h6>
+              <h6 id="wv3"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="w-4">
+                <input type="checkbox" id="w-4" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>W-4:</h6>
+              <h6 id="wv4"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="w-5">
+                <input type="checkbox" id="w-5" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>W-5:</h6>
+              <h6 id="wv5"></h6>
+              </div>
+            </div>
+            
+            <!-- Wind Units -->
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h5>Hydro Power</h5>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="h-1">
+                <input type="checkbox" id="h-1" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>H-1:</h6>
+              <h6 id="hv1"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="h-2">
+                <input type="checkbox" id="h-2" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>H-2:</h6>
+              <h6 id="hv2"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="h-3">
+                <input type="checkbox" id="h-3" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>H-3:</h6>
+              <h6 id="hv3"></h6>
+              </div>
+
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="h-4">
+                <input type="checkbox" id="h-4" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>H-4:</h6>
+              <h6 id="hv4"></h6>
+              </div>
+
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+            
+              <label class="switch" for="h-5">
+                <input type="checkbox" id="h-5" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>H-5:</h6>
+              <h6 id="hv5"></h6>
+              </div>
+            </div>
+            
+            <!-- Hydro Units -->
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h5>Human Kinetics</h5>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="p-1">
+                <input type="checkbox" id="p-1" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>K-1:</h6>
+              <h6 id="kv1"></h6>
+              </div>
+
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="p-2">
+                <input type="checkbox" id="p-2" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>K-2:</h6>
+              <h6 id="kv2"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="p-3">
+                <input type="checkbox" id="p-3" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>K-3:</h6>
+              <h6 id="kv3"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              <label class="switch" for="p-4">
+                <input type="checkbox" id="p-4" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>K-4:</h6>
+              <h6 id="kv4"></h6>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center">
+              
+              <label class="switch" for="p-5">
+                <input type="checkbox" id="p-5" class="mdl-switch__input">
+                <span class="slider"></span>
+              </label>
+              <div class="d-flex justify-content-center align-self-center">
+                <h6>K-5:</h6>
+              <h6 id="kv5"></h6>
+              </div>
+            </div>
+            
+            <!-- Bike Units -->
+          </div>
+        </div>
+
+    </div>
+   
+
+    
+      
+ <!-- Footer -->
+ <footer class="fixed-bottom ">
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+      Smart Green Building Energy Management System
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+        <script src="http://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+   
+
+   <script src="assets\js\firebaseCDN.js"></script>
+   <script src="assets\js\sensor.js"></script>
+   <script src="assets\js\battery.js"></script>
+   <script src="assets\js\voltage.js"></script>
+   <script src="assets\js\PowerGenerationData.js"></script>
+   <script src="assets\js\Controls.js"></script>
+   <script src="assets\js\authentication.js"></script>
+   <script src="assets\js\units.js"></script>
+    
+  </body>
+</html>
+
+<!--   
+  <div class="row">
+    <div class="col">
+      <label class="switch" for="sBreaker">
+        <input type="checkbox" id="sBreaker" class="mdl-switch__input">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="col">
+      <label class="switch" for="wBreaker">
+        <input type="checkbox" id="wBreaker">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="col">
+      <label class="switch" for="hBreaker">
+        <input type="checkbox" id="hBreaker">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="col">
+      <label class="switch" for="pBreaker">
+        <input type="checkbox" id="pBreaker">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  -->
